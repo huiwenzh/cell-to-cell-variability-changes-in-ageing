@@ -1,8 +1,8 @@
 # Cell-to-cell variability changes in complex biological processes like differentiationa and ageing
 
 
-## This repository include the scripts to generate for paper: 
-We used the **Tabula Muris Senis** dataset to perform a systematic evaluation of 14 cell-to-cell variability metrics that are generic or transcriptomic-data specific and demonstrated the significant impact of cell-to-cell variability changes during the B lymphocytes differentiaion processes and ageing. 
+## This repository include the scripts to generate figures for paper: 
+We used the **Tabula Muris Senis** dataset to perform a systematic evaluation of 14 cell-to-cell variability metrics that are either generic or transcriptomic-data specific and demonstrated the significant impact of cell-to-cell variability changes during the B lymphocytes differentiaion processes and ageing. 
 
 ### Data accesses
 **Tabula muris sensis Marrow datasets**
@@ -23,5 +23,6 @@ We simulated *four* datasets with different cell-cell variation at gene levels a
 
 ### Normalisation 
 **Generic metrics** such as *SD*, *IQR*, *MAD*, *CV*, *FF* requires normalised values as input so that CPM-normalisation was applied to keep consistency. 
+
 **Transcriptomic-data-specific metrics** were processed with the in-built normalisation methods so raw data was used as input.
 
