@@ -19,7 +19,7 @@ Spike-in dataset was used as a negative control in the evaluation of metrics per
 
 **Simulation datasets**
 
-We simulated *four* datasets with different cell-cell variation at gene levels and different degrees of dropout rate from [splatter](https://bioconductor.org/packages/release/bioc/html/splatter.html). We used the parameters from HSC SMARTSeq2 datasets with 400 known highly variable genes. 
+We simulated *four* datasets with different cell-cell variation at gene levels and different degrees of dropout rate from [splatter](https://bioconductor.org/packages/release/bioc/html/splatter.html). We used the parameters from HSC droplet datasets with 400 known highly variable genes. 
 
 ### Normalisation 
 **Generic metrics** such as *SD*, *IQR*, *MAD*, *CV*, *FF* requires normalised values as input so that CPM-normalisation was applied to keep consistency. 
