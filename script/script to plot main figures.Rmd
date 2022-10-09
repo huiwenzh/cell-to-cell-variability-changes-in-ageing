@@ -1,0 +1,138 @@
+---
+title: "Figure 1"
+output: html_document
+date: '2022-10-06'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Prepare the libraries required for plotting
+```{r library, echo=FALSE}
+library(ggplot2)
+library(tidyverse)
+library(cowplot)
+library(colorspace)
+library(ggrepel)
+library(viridis)
+```
+Generate diagram to introduce the dataset information used in the comparative study 
+```{r diagram,echo = FALSE}
+sample_info = data.frame(Cell_type =c('Naive B',"Naive B","HSC","HSC","Immature B","LargeB","Simulation *4","Technical"), Technology = c("FACS","Droplet","FACS","Droplet","FACS","Droplet","Droplet",'CEL-seq'), Size = c(1166,49,1174,486,44,10085,400,1015),Type = c(rep('Biological samples',6),"Simulation samples","Technical samples"), Method = c("full-length","3'","full-length","3'","full-length","3'","3'","3'") )
+sample_info <- sample_info[order(sample_info$Size,decreasing = T),]
+
+region_cols <- c("#F0E442", "#0072B2", "#999999")
+ 
+ggplot(sample_info, aes(Cell_type  ,Method)) +
+  geom_point(
+    aes(color = Type, fill = Type,size =  Size )
+    ,shape=16
+  ) +scale_size(range = c(5, 12))+
+   scale_color_viridis(discrete = TRUE, option = "D")+
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal_hgrid(14, rel_small = 1)+xlab('')+ylab('') # font size 12 pt throughout
+#ggsave("Dataset info.pdf", g1, path = "~/Table and Figures")
+ 
+```
+ 
+Figure 1: The evaluation of the metric performance with two main sequencing platforms
+
+```{r, Figure 1 }
+# load the final performance matrix 
+Performance_on_all_gene <- readRDS("Performance_on_all_gene.rds")
+# reorder
+Performance_on_all_gene$metric <- factor(Performance_on_all_gene$metric, levels = c("SD", "IQR", "MAD", "CV","FF","LCV","BASiCS","DESeq2","DM","edgeR","glmGamPoi","scran","Seurat_mvp","Seurat_vst"))
+# To plot different sequencing platforms
+library(dplyr)
+as_tibble(Performance_on_all_gene) %>% 
+    filter(cell_type%in%c("HSC","Naive B"))   %>% 
+ ggplot(., aes(x=as.numeric(value), y=cell_type, fill=platform)) + 
+  geom_boxplot(outlier.size = 0.1)+
+  theme_bw(base_size = 10)+
+  facet_wrap(  .~metric ,nrow = 7,ncol=2,scales = "free" , dir="v")  +
+  labs(title = "Overall cell-to-cell variability for all genes",
+       y = "", x = "") 
+
+
+.# Distance between the overall distributions from different platforms and cell types
+Distance_all <- readRDS('Distance_between_cell_types.rds')
+1- Distance_all
+```
+
+Figure 2: The evaluation of the metric comparison on different sample sizes (TMS and external)
+
+```{r, Figure 2}
+Performance_sample_size <- Performance_on_all_gene[Performance_on_all_gene$platform=="FACS",]
+ggplot(Performance_sample_size, aes(x=as.numeric(value), y=cell_type, fill=size)) + 
+  geom_boxplot(outlier.size = 0.1)+
+  theme_bw(base_size = 10)+
+  facet_wrap(  .~metric ,nrow = 7,ncol=2,scales = "free" , dir="v")  +
+  labs(title = "Cell-to-cell variability for all genes",
+       y = "", x = "") 
+
+Performance_sample_size1 <- Performance_on_all_gene[Performance_on_all_gene$platform=="Droplet",]
+levels(Performance_sample_size1$cell_type)[4] <- 'B cell'
+as_tibble(Performance_sample_size1) %>% 
+    filter(cell_type%in%c("Naive B","B cell"))   %>% 
+ ggplot(., aes(x=as.numeric(value), y=cell_type, fill=size)) + 
+  geom_boxplot(outlier.size = 0.1)+
+  theme_bw(base_size = 10)+
+    scale_fill_manual(values=c("#00BFC4","#C77CFF" ))+
+  facet_wrap(  .~metric ,nrow = 7,ncol=2,scales = "free" , dir="v")  +
+  labs(title = "Overall cell-to-cell variability for all genes",
+       y = "", x = "") 
+
+```
+
+Figure 3: 
+a) The evaluation of the metric comparison on known-degree of variability 
+b) The overall performance dotplot
+
+```{r, Figure 3}
+Performance_lowvar_genes <- readRDS('Performance_on_lowvar_genes.rds')
+Performance_lowvar_genes.1 <- reshape2::melt(Performance_lowvar_genes) 
+Performance_sim <- readRDS('Performance_on_simulation.rds')
+Performance_sim <- data.frame(metric=Performance_sim$variable,variable=rep('Simulation (HVGs)',48),value = Performance_sim$value/200)
+
+Performance_known_var <- rbind(Performance_lowvar_genes.1,Performance_sim)
+
+ggplot(Performance_known_var, aes(x=metric, y=as.numeric(value), fill=variable)) + 
+  geom_boxplot(outlier.size = 0.1)+
+  theme_bw(base_size = 10) + scale_fill_brewer(palette="Dark2")  +
+  labs(title = "Rediscovery rate in the presence of known degrees of variability",
+       y = "", x = "") 
+Overall <- readRDS("Overall_evaluation.rds")
+a <- c("#70AD47","#70AD47","#70AD47","#FFC000", '#ff0000' ,"#FFC000","#FFC000","#FFC000","#70AD47","#70AD47","#FFC000","#FFC000","#000000","#FFC000")
+
+p <- ggplot(Overall , aes(x = (1-value), y = metric))    +
+  geom_point(aes(colour = platform, size=size), alpha=0.8) +facet_grid(cols = vars(variable))+theme_bw() +
+  theme(axis.text.y = element_text( hjust = 1, colour = a,size=14))+xlab("Performance")+ylab('')
+
+Ranks <- readRDS('Final_ranks.rds')
+p1 <- ggplot(Ranks, 
+       aes(x= performance , 
+           y=reorder(metric, performance))) +
+  geom_point()+theme_bw()+ylab('') +
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() 
+  )
+library(ggpubr)
+ggarrange(p , p1,legend = 'right', widths = c(8,1))
+```
+
+Figure 4: Understanding the genes that consistently more variable and stably during the B lymphocyte differetiation process
+
+```{r, Figure 4}
+# read pathway information from MsigDB
+pathways <- readxl::read_xlsx('Differentiation pathways.xlsx')
+ 
+ 
+ggcharts::bar_chart(
+  pathways,
+  pathway,
+  Size,
+  fill = Direction,
+  facet = Direction )+xlab('')+ 
+  scale_fill_brewer(palette = "Set2")+ylab('')+theme_bw()
+```
