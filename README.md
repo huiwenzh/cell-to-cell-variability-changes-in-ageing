@@ -28,7 +28,7 @@ We simulated *four* datasets with different cell-cell variation at gene levels a
 **Transcriptomic-data-specific metrics** were processed with the in-built normalisation methods so raw data was used as input.
 
 ### Biological known-variability genesets 
-**Ribosomal genes**  [78 human ribosomal genes] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC155282/) orthologous were applied to determine the stability.
+**Ribosomal genes**  [78 human ribosomal genes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC155282/) orthologous were applied to determine the stability.
 
 **Stably expressed genes (SEGs)** single-cell RNA-seq SEGs for mouse data adopted from [*Lin et al*](https://academic.oup.com/gigascience/article/8/9/giz106/5570567) was adpoted to evaluate the metric performance. 
 
