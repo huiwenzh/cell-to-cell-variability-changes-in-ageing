@@ -1,7 +1,7 @@
 # Measuring cell-to-cell gene expression variability in single-cell RNA-sequencing data: a comparative analysis and applications to B cell ageing
 
 
-## This repository include the scripts to generate figures for paper: 
+## This repository include the scripts to generate figures for [our manuscript](https://www.biorxiv.org/content/10.1101/2022.11.24.517880v1.full.pdf+html): 
 
 We used the **Tabula Muris Senis** dataset to perform a systematic evaluation of 14 cell-to-cell variability metrics that are either generic or transcriptomic-data specific and demonstrated the significant impact of cell-to-cell variability changes during the B lymphocytes differentiaion processes and ageing. 
 
