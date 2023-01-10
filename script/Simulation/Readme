@@ -1,0 +1,2 @@
+To overcome the issues of uncertain true biological highly variable genes, we used simulation package *splatter* to simulate four sets of data with different 
+biological variability and dropout. The performance of 14 metrics were evaluated by the rediscovery rate. See more details in our paper. 
