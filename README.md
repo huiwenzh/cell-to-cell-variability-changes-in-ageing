@@ -5,10 +5,13 @@
 
 We used the **Tabula Muris Senis** dataset to perform a systematic evaluation of 14 cell-to-cell variability metrics that are either generic or transcriptomic-data specific and demonstrated the significant impact of cell-to-cell variability changes during the B lymphocytes differentiaion processes and ageing. 
 
+### A wrapper for quick performing cell-to-cell variability 14 metrics
+14 metrics that compared in the study are consolidated into a single R function so you can easy access different metric application in one single line:[scVar](https://github.com/huiwenzh/scVar)
+
 ### Data accesses
 **Tabula muris sensis Marrow datasets**
 
-The raw data was downloaded from [link](https://figshare.com/articles/dataset/Tabula_Muris_Senis_Data_Objects/12654728) for both FACS-sorted SMARTSeq2 sequencing and 10X droplet-based sequencing data. In brief, we selected cell types with different samples sizes in two sequencing platforms and similar samples within one sequencing platform. More preprocessing steps please refer to our [paper].
+The raw data was downloaded from [link](https://figshare.com/articles/dataset/Tabula_Muris_Senis_Data_Objects/12654728) for both FACS-sorted SMARTSeq2 sequencing and 10X droplet-based sequencing data. In brief, we selected cell types with different samples sizes in two sequencing platforms and similar samples within one sequencing platform. More preprocessing steps please refer to the manuscript.
 
 **Large B dataset**
 
@@ -23,7 +26,7 @@ Spike-in dataset was used as a negative control in the evaluation of metrics per
 We simulated *four* datasets with different cell-cell variation at gene levels and different degrees of dropout rate from [splatter](https://bioconductor.org/packages/release/bioc/html/splatter.html). We used the parameters from HSC droplet datasets with 400 known highly variable genes. 
 
 ### Normalisation 
-**Generic metrics** such as *SD*, *IQR*, *MAD*, *CV*, *FF* requires normalised values as input so that CPM-normalisation was applied to keep consistency. 
+**Generic metrics** such as *SD*, *IQR*, *MAD*, *CV*, *FF*,*LCV* requires normalised values as input so that scran-normalisation was applied to keep consistency. 
 
 **Transcriptomic-data-specific metrics** were processed with the in-built normalisation methods so raw data was used as input.
 
