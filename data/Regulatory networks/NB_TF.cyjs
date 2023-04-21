@@ -1,0 +1,822 @@
+{
+  "format_version" : "1.0",
+  "generated_by" : "cytoscape-3.7.1",
+  "target_cytoscapejs_version" : "~2.1",
+  "data" : {
+    "shared_name" : "Sheet1_4",
+    "name" : "Sheet1_4",
+    "SUID" : 426,
+    "__Annotations" : [ ],
+    "selected" : true
+  },
+  "elements" : {
+    "nodes" : [ {
+      "data" : {
+        "id" : "490",
+        "shared_name" : "Bcl6",
+        "name" : "Bcl6",
+        "SUID" : 490,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -432.23377761015524,
+        "y" : -106.70441480783316
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "488",
+        "shared_name" : "Pik3r1",
+        "name" : "Pik3r1",
+        "SUID" : 488,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -423.01746901640524,
+        "y" : 24.545325792752777
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "487",
+        "shared_name" : "Stat1",
+        "name" : "Stat1",
+        "SUID" : 487,
+        "TF" : true,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -328.9333015359365,
+        "y" : -48.1119923224816
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "485",
+        "shared_name" : "Cd72",
+        "name" : "Cd72",
+        "SUID" : 485,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 186.28094712129007,
+        "y" : -176.3820881476769
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "482",
+        "shared_name" : "Itgb2",
+        "name" : "Itgb2",
+        "SUID" : 482,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 128.08178940644632,
+        "y" : -242.58628126291129
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "479",
+        "shared_name" : "Ptprc",
+        "name" : "Ptprc",
+        "SUID" : 479,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 40.68618324628244,
+        "y" : -248.61481519845816
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "473",
+        "shared_name" : "Ccnd3",
+        "name" : "Ccnd3",
+        "SUID" : 473,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -208.55018386015524,
+        "y" : -78.53244825509879
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "471",
+        "shared_name" : "Ccnd2",
+        "name" : "Ccnd2",
+        "SUID" : 471,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -215.64243849882712,
+        "y" : -8.631981336153473
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "469",
+        "shared_name" : "Tapbp",
+        "name" : "Tapbp",
+        "SUID" : 469,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -160.13599928984274,
+        "y" : 59.62486223074106
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "467",
+        "shared_name" : "Sfpi1",
+        "name" : "Sfpi1",
+        "SUID" : 467,
+        "TF" : true,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 74.56374588837991,
+        "y" : -127.92298170236441
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "465",
+        "shared_name" : "Ly9",
+        "name" : "Ly9",
+        "SUID" : 465,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 26.35271874299417,
+        "y" : -45.08466383127066
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463",
+        "shared_name" : "Ltf",
+        "name" : "Ltf",
+        "SUID" : 463,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -38.680997458788056,
+        "y" : -137.47568555978629
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "461",
+        "shared_name" : "Jund",
+        "name" : "Jund",
+        "SUID" : 461,
+        "TF" : true,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -126.693677512499,
+        "y" : -123.56693311838004
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "457",
+        "shared_name" : "Gstm1",
+        "name" : "Gstm1",
+        "SUID" : 457,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -31.868741599413056,
+        "y" : 81.38063768240121
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456",
+        "shared_name" : "Jun",
+        "name" : "Jun",
+        "SUID" : 456,
+        "TF" : true,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -76.13631209501852,
+        "y" : -24.10388990548941
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "454",
+        "shared_name" : "Cd79b",
+        "name" : "Cd79b",
+        "SUID" : 454,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 19.14160919189453,
+        "y" : 237.226026772775
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "452",
+        "shared_name" : "Elavl1",
+        "name" : "Elavl1",
+        "SUID" : 452,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -99.86890944609274,
+        "y" : 131.94703248830942
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "450",
+        "shared_name" : "Krt8",
+        "name" : "Krt8",
+        "SUID" : 450,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -246.9063720703125,
+        "y" : 216.1497056491
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "449",
+        "shared_name" : "Ets1",
+        "name" : "Ets1",
+        "SUID" : 449,
+        "TF" : true,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -108.97398376464844,
+        "y" : 243.58702254363126
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "447",
+        "shared_name" : "Trf",
+        "name" : "Trf",
+        "SUID" : 447,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 439.2624992453135,
+        "y" : -79.53742262033316
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "445",
+        "shared_name" : "Eno3",
+        "name" : "Eno3",
+        "SUID" : 445,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 362.0514091574229,
+        "y" : 105.55484727712778
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "443",
+        "shared_name" : "Cdkn1b",
+        "name" : "Cdkn1b",
+        "SUID" : 443,
+        "TF" : false,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 453.95515671601663,
+        "y" : 37.47232774587778
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "441",
+        "shared_name" : "Crebbp",
+        "name" : "Crebbp",
+        "SUID" : 441,
+        "TF" : true,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 343.2379325949229,
+        "y" : -10.751518689669098
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "439",
+        "shared_name" : "Fos",
+        "name" : "Fos",
+        "SUID" : 439,
+        "TF" : true,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 44.674691113141876,
+        "y" : 36.61304429861215
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "437",
+        "shared_name" : "Bcl2",
+        "name" : "Bcl2",
+        "SUID" : 437,
+        "TF" : false,
+        "DV" : "dec",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 210.97772446504007,
+        "y" : -58.36933180002066
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "436",
+        "shared_name" : "Atf4",
+        "name" : "Atf4",
+        "SUID" : 436,
+        "TF" : true,
+        "DV" : "inc",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 160.60847702851663,
+        "y" : 44.53202012869028
+      },
+      "selected" : false
+    } ],
+    "edges" : [ {
+      "data" : {
+        "id" : "493",
+        "source" : "487",
+        "target" : "473",
+        "shared_name" : "Stat1 (interacts with) Ccnd3",
+        "name" : "Stat1 (interacts with) Ccnd3",
+        "interaction" : "interacts with",
+        "SUID" : 493,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "492",
+        "source" : "487",
+        "target" : "471",
+        "shared_name" : "Stat1 (interacts with) Ccnd2",
+        "name" : "Stat1 (interacts with) Ccnd2",
+        "interaction" : "interacts with",
+        "SUID" : 492,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "491",
+        "source" : "487",
+        "target" : "490",
+        "shared_name" : "Stat1 (interacts with) Bcl6",
+        "name" : "Stat1 (interacts with) Bcl6",
+        "interaction" : "interacts with",
+        "SUID" : 491,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "489",
+        "source" : "487",
+        "target" : "488",
+        "shared_name" : "Stat1 (interacts with) Pik3r1",
+        "name" : "Stat1 (interacts with) Pik3r1",
+        "interaction" : "interacts with",
+        "SUID" : 489,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "486",
+        "source" : "467",
+        "target" : "485",
+        "shared_name" : "Sfpi1 (interacts with) Cd72",
+        "name" : "Sfpi1 (interacts with) Cd72",
+        "interaction" : "interacts with",
+        "SUID" : 486,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "484",
+        "source" : "467",
+        "target" : "437",
+        "shared_name" : "Sfpi1 (interacts with) Bcl2",
+        "name" : "Sfpi1 (interacts with) Bcl2",
+        "interaction" : "interacts with",
+        "SUID" : 484,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "483",
+        "source" : "467",
+        "target" : "482",
+        "shared_name" : "Sfpi1 (interacts with) Itgb2",
+        "name" : "Sfpi1 (interacts with) Itgb2",
+        "interaction" : "interacts with",
+        "SUID" : 483,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "481",
+        "source" : "467",
+        "target" : "467",
+        "shared_name" : "Sfpi1 (interacts with) Sfpi1",
+        "name" : "Sfpi1 (interacts with) Sfpi1",
+        "interaction" : "interacts with",
+        "SUID" : 481,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "480",
+        "source" : "467",
+        "target" : "479",
+        "shared_name" : "Sfpi1 (interacts with) Ptprc",
+        "name" : "Sfpi1 (interacts with) Ptprc",
+        "interaction" : "interacts with",
+        "SUID" : 480,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "478",
+        "source" : "467",
+        "target" : "465",
+        "shared_name" : "Sfpi1 (interacts with) Ly9",
+        "name" : "Sfpi1 (interacts with) Ly9",
+        "interaction" : "interacts with",
+        "SUID" : 478,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "477",
+        "source" : "467",
+        "target" : "463",
+        "shared_name" : "Sfpi1 (interacts with) Ltf",
+        "name" : "Sfpi1 (interacts with) Ltf",
+        "interaction" : "interacts with",
+        "SUID" : 477,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "476",
+        "source" : "461",
+        "target" : "456",
+        "shared_name" : "Jund (interacts with) Jun",
+        "name" : "Jund (interacts with) Jun",
+        "interaction" : "interacts with",
+        "SUID" : 476,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "475",
+        "source" : "456",
+        "target" : "439",
+        "shared_name" : "Jun (interacts with) Fos",
+        "name" : "Jun (interacts with) Fos",
+        "interaction" : "interacts with",
+        "SUID" : 475,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "474",
+        "source" : "456",
+        "target" : "473",
+        "shared_name" : "Jun (interacts with) Ccnd3",
+        "name" : "Jun (interacts with) Ccnd3",
+        "interaction" : "interacts with",
+        "SUID" : 474,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "472",
+        "source" : "456",
+        "target" : "471",
+        "shared_name" : "Jun (interacts with) Ccnd2",
+        "name" : "Jun (interacts with) Ccnd2",
+        "interaction" : "interacts with",
+        "SUID" : 472,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "470",
+        "source" : "456",
+        "target" : "469",
+        "shared_name" : "Jun (interacts with) Tapbp",
+        "name" : "Jun (interacts with) Tapbp",
+        "interaction" : "interacts with",
+        "SUID" : 470,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "468",
+        "source" : "456",
+        "target" : "467",
+        "shared_name" : "Jun (interacts with) Sfpi1",
+        "name" : "Jun (interacts with) Sfpi1",
+        "interaction" : "interacts with",
+        "SUID" : 468,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466",
+        "source" : "456",
+        "target" : "465",
+        "shared_name" : "Jun (interacts with) Ly9",
+        "name" : "Jun (interacts with) Ly9",
+        "interaction" : "interacts with",
+        "SUID" : 466,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464",
+        "source" : "456",
+        "target" : "463",
+        "shared_name" : "Jun (interacts with) Ltf",
+        "name" : "Jun (interacts with) Ltf",
+        "interaction" : "interacts with",
+        "SUID" : 464,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462",
+        "source" : "456",
+        "target" : "461",
+        "shared_name" : "Jun (interacts with) Jund",
+        "name" : "Jun (interacts with) Jund",
+        "interaction" : "interacts with",
+        "SUID" : 462,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "460",
+        "source" : "456",
+        "target" : "456",
+        "shared_name" : "Jun (interacts with) Jun",
+        "name" : "Jun (interacts with) Jun",
+        "interaction" : "interacts with",
+        "SUID" : 460,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "459",
+        "source" : "456",
+        "target" : "452",
+        "shared_name" : "Jun (interacts with) Elavl1",
+        "name" : "Jun (interacts with) Elavl1",
+        "interaction" : "interacts with",
+        "SUID" : 459,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "458",
+        "source" : "456",
+        "target" : "457",
+        "shared_name" : "Jun (interacts with) Gstm1",
+        "name" : "Jun (interacts with) Gstm1",
+        "interaction" : "interacts with",
+        "SUID" : 458,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "455",
+        "source" : "449",
+        "target" : "454",
+        "shared_name" : "Ets1 (interacts with) Cd79b",
+        "name" : "Ets1 (interacts with) Cd79b",
+        "interaction" : "interacts with",
+        "SUID" : 455,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "453",
+        "source" : "449",
+        "target" : "452",
+        "shared_name" : "Ets1 (interacts with) Elavl1",
+        "name" : "Ets1 (interacts with) Elavl1",
+        "interaction" : "interacts with",
+        "SUID" : 453,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "451",
+        "source" : "449",
+        "target" : "450",
+        "shared_name" : "Ets1 (interacts with) Krt8",
+        "name" : "Ets1 (interacts with) Krt8",
+        "interaction" : "interacts with",
+        "SUID" : 451,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "448",
+        "source" : "441",
+        "target" : "447",
+        "shared_name" : "Crebbp (interacts with) Trf",
+        "name" : "Crebbp (interacts with) Trf",
+        "interaction" : "interacts with",
+        "SUID" : 448,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "446",
+        "source" : "441",
+        "target" : "445",
+        "shared_name" : "Crebbp (interacts with) Eno3",
+        "name" : "Crebbp (interacts with) Eno3",
+        "interaction" : "interacts with",
+        "SUID" : 446,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "444",
+        "source" : "441",
+        "target" : "443",
+        "shared_name" : "Crebbp (interacts with) Cdkn1b",
+        "name" : "Crebbp (interacts with) Cdkn1b",
+        "interaction" : "interacts with",
+        "SUID" : 444,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "442",
+        "source" : "441",
+        "target" : "437",
+        "shared_name" : "Crebbp (interacts with) Bcl2",
+        "name" : "Crebbp (interacts with) Bcl2",
+        "interaction" : "interacts with",
+        "SUID" : 442,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "440",
+        "source" : "436",
+        "target" : "439",
+        "shared_name" : "Atf4 (interacts with) Fos",
+        "name" : "Atf4 (interacts with) Fos",
+        "interaction" : "interacts with",
+        "SUID" : 440,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "438",
+        "source" : "436",
+        "target" : "437",
+        "shared_name" : "Atf4 (interacts with) Bcl2",
+        "name" : "Atf4 (interacts with) Bcl2",
+        "interaction" : "interacts with",
+        "SUID" : 438,
+        "shared_interaction" : "interacts with",
+        "selected" : false
+      },
+      "selected" : false
+    } ]
+  }
+}
