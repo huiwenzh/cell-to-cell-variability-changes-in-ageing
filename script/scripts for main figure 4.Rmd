@@ -1,0 +1,79 @@
+---
+title: Fluctuations in cell-to-cell variability help explain the complex B lymphocyte
+  differentiation process
+output: html_document
+date: '2023-01-21'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r library}
+library(scran)
+library(Seurat)
+library(reshape2)
+```
+
+Using TMS bone marrow, especially from HSC to B lineages, to investigate the gene expression changes in the differentiation processes. 
+
+```{r, get EV for each cell type}
+#Marrow <- readRDS("TMS_Marrow_facs.rds")
+sce <- as.SingleCellExperiment(Marrow)
+# focus on these 5 genes
+cell_types5 <- c("hematopoietic stem cell","late pro-B cell","precursor B cell","immature B cell","naive B cell")
+
+sce.5 <- sce[,sce$cell_ontology_class%in%cell_types5 ]
+zeros <- apply(counts(sce.5),1,function(x){sum(x==0)}) 
+# performing 5% cutoff to reduce the false positive in measuring biological variability
+sce.5 <- sce.5[zeros<0.95*ncol(sce.5),]
+sce.5 <- computeSumFactors(sce.5)
+sce.5 <- logNormCounts(sce.5)
+age <- as.factor(sce.5$age)
+cell_names <-as.factor(as.character(sce.5$cell_ontology_class))
+design <- model.matrix(~age+cell_names)
+dec <- modelGeneVar(sce.5, design=design)
+
+```
+
+Applications to get the biological variability for each cell type. We here identify genes that consistently more variable or stable during the differentiation processes.
+
+```{r find EV}
+GetEV_block <- function(name){
+  dat1 <- sce.5[,sce.5$cell_ontology_class==name]
+  dat1.dec <- modelGeneVar(dat1,block=dat1$age)
+  dat1.ev <- dat1.dec$bio
+  names(dat1.ev) <- dat1.dec@rownames
+  dat1.ev
+}
+HSC_ev <- GetEV_block(cell_types5[1]) 
+LB_ev <- GetEV_block(cell_types5[2])
+PB_ev <- GetEV_block(cell_types5[3])
+IB_ev <- GetEV_block(cell_types5[4])
+NB_ev <- GetEV_block(cell_types5[5])
+# More stable
+decrease <- rownames(sce.5)[(HSC_ev - LB_ev)>0 & (LB_ev - PB_ev)>0 & (PB_ev - IB_ev)>0 & (IB_ev - NB_ev)>0 & (HSC_ev-NB_ev)>1] # additional abs >1 ensure the difference is strong enough
+
+# More variable 
+increase <- rownames(sce.5)[(HSC_ev - LB_ev)<0 & (LB_ev - PB_ev)<0 & (PB_ev - IB_ev)<0 & (IB_ev - NB_ev)<0 & (NB_ev - HSC_ev)>1]# additional abs >1 ensure the difference is strong enough
+
+decrease_dat <- cbind(HSC_ev[names(HSC_ev)%in%decrease],LB_ev[names(LB_ev)%in%decrease],PB_ev[names(PB_ev)%in%decrease],IB_ev[names(IB_ev)%in%decrease],NB_ev[names(NB_ev)%in%decrease] )
+colnames(decrease_dat) <- cell_types5
+increase_dat <- cbind(HSC_ev[names(HSC_ev)%in%increase],LB_ev[names(LB_ev)%in%increase],PB_ev[names(PB_ev)%in%increase],IB_ev[names(IB_ev)%in%increase],NB_ev[names(NB_ev)%in%increase] )
+colnames(increase_dat) <- cell_types5
+
+dat <- as.data.frame(rbind(increase_dat,decrease_dat))
+dat$group <- c(rep("Consistently more variable during differentiation",dim(increase_dat)[1]),rep('Consistently more stable during differentiation',dim(decrease_dat)[1]))
+
+# library(GGally)
+# ggparcoord(dat,
+#            columns = 1:5, scale="globalminmax",
+#            showPoints = T,alphaLines =1,groupColumn=6
+# ) + scale_color_brewer(palette = "Set2")  + facet_wrap(~group, scales = "free",ncol=2)+labs(x=NULL, y=NULL)+theme_bw()
+
+ggplot(dat1, aes(x=variable, y=value, fill=group))+ geom_boxplot(outlier.colour="grey1", outlier.shape=16,
+             outlier.size=1 ) +scale_fill_brewer(palette="Set2")  + facet_wrap(~group, scales = "free",ncol=2)+labs(x=NULL, y='Cell-to-cell variability')+theme_bw()+ theme(text = element_text(size = 12)) + theme(legend.position = "none")
+
+```
+
+
