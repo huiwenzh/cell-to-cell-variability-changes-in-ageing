@@ -52,10 +52,25 @@ as_tibble(Performance_on_all_gene) %>%
  ggplot(., aes(x=as.numeric(value), y=cell_type, fill=platform)) + 
   geom_boxplot(outlier.size = 0.1)+
   theme_bw(base_size = 12 )+
-  facet_wrap(  .~metric ,nrow = 5,ncol=3,scales = "free" , dir="h")  +
+  facet_wrap(  .~metric ,nrow = 3,ncol=5,scales = "free_x" , dir="h")  +
   labs(title = "Cell-to-cell variability for all genes",
-       y = "", x = "")  + theme(legend.position="right")
-ggsave('Figure2.png', width = 8, height = 12)
+       y = "", x = "")  + theme(legend.position="bottom")
+ggsave('Figure2a.png', width = 12, height =8 )
+
+disatnce_table <-  Distance_between_cell_types
+rownames(disatnce_table) <- c("HSC","full-length (smartseq2)","Naive B","3'-end (10X droplet)")
+disatnce_table1 <- reshape2::melt(disatnce_table)
+disatnce_table1$info <- rep(c("Platform variation","Cell type variation","Platform variation","Cell type variation"), 14)
+disatnce_table1$Var1 <- as.factor(disatnce_table1$Var1)
+disatnce_table1$Var1 <- factor(disatnce_table1$Var1,levels = c("HSC","Naive B","full-length (smartseq2)","3'-end (10X droplet)"))
+library(ggplot2)
+ggplot(data=disatnce_table1, aes(x=value, y=Var1, fill=info)) +scale_fill_manual(values=c('#d7aeac',"#5c6c7c"))+
+  geom_bar(stat="identity", width=0.8) +
+  theme_bw(base_size = 12 )+
+  facet_wrap(  .~Var2 ,nrow = 3,ncol=5,  dir="h") +
+  labs(title = "Distances between samples and sequencing platforms",
+       y = "", x = "")  + theme(legend.position="bottom")
+ggsave('Figure2b.png', width = 12, height =8 )
  
 ```
 
@@ -168,3 +183,5 @@ Ranks_10x <- Ranks_10x[order(Ranks_10x$performance,decreasing = T),]
 Ranks_10x$metric <- factor(Ranks_10x$metric, levels = Ranks_10x$metric)
 
 ```
+
+ 
